@@ -31,15 +31,7 @@ describe("createGameOfLife", () => {
     expect(field).toBeTruthy();
     expect(field.querySelectorAll(".cell").length).toBe(400);
   });
-  it("renders button (and toggles it state on click)", () => {
-    const button = el.querySelector("button") as HTMLButtonElement;
-    expect(button).toBeTruthy();
-    expect(button.innerHTML).toBe("Start");
-    button.dispatchEvent(new window.Event("click"));
-    expect(button.innerHTML).toBe("Stop");
-    button.dispatchEvent(new window.Event("click"));
-    expect(button.innerHTML).toBe("Start");
-  });
+ 
   it("changes cell status on cell click", () => {
     const x = Math.floor(Math.random() * 20);
     const y = Math.floor(Math.random() * 20);
